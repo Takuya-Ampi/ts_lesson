@@ -4,7 +4,15 @@ let float = 3.14
 let negative = -0.12
 let single = 'hello'
 
-// 型推論に任せた書き方(この書き方が一番良い)
+// Tupleの型。型注釈が必ず必要
+// Tupleを簡単に説明すると、配列に厳しく制限がかかったもの
+// Tuple型の使い所=>例)0番目の要素にstring,1番目の要素にnumber,2番目の要素にbooleanが必ずこの順番で配列として欲しい
+const book: [string, number, boolean] = ['buisiness', 1500, false]
+console.log(book[1])
+
+
+
+// 配列の型。型推論に任せた書き方(この書き方が一番良い)
 const fruits = ['Apple', 'Banana', 'Grape']
 
 // 配列の型注釈の書き方(string)
@@ -14,7 +22,7 @@ const fruits2: (string | number)[] = ['Apple', 'Banana', 'Grape', 1]
 const fruit1 = fruits1[0]
 
 
-// 型推論に任せた書き方(この書き方が一番良い)
+// オブジェクトの型。型推論に任せた書き方(この書き方が一番良い)
 const person = {
   name: {
     first: 'Taro',
