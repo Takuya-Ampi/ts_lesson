@@ -5,6 +5,16 @@ let negative = -0.12
 let single = 'hello'
 
 // 型推論に任せた書き方(この書き方が一番良い)
+const fruits = ['Apple', 'Banana', 'Grape']
+
+// 配列の型注釈の書き方(string)
+const fruits1: string[] = ['Apple', 'Banana', 'Grape']
+// 配列の型注釈の書き方(stringとnumber)
+const fruits2: (string | number)[] = ['Apple', 'Banana', 'Grape', 1]
+const fruit1 = fruits1[0]
+
+
+// 型推論に任せた書き方(この書き方が一番良い)
 const person = {
   name: {
     first: 'Taro',
