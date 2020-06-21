@@ -4,6 +4,34 @@ let float = 3.14
 let negative = -0.12
 let single = 'hello'
 
+const coffeeSize = {
+  short: 'short',
+  tall: 'tall',
+  grande: 'grande',
+  venti: 'venti'
+}
+
+// enumの型。型注釈が必ず必要。書き方が独特なので注意
+// enumは基本大文字から始まる。プロパティは全て大文字にする。
+// enumは特定のまとまったものを受け入れる
+// const CoffeeSize = {
+//   SHORT: 'SHORT',
+//   TALL: 'TALL',
+//   GRANDE: 'GRANDE',
+//   VENTI: 'VENTI'
+// }
+enum CoffeeSize {
+  SHORT = 'SHORT',
+  TALL = 'TALL',
+  GRANDE = 'GRANDE',
+  VENTI = 'VENTI'
+}
+// coffeeのsizeが上の四種類になるよううにしたい
+const coffee = {
+  hot: true,
+  size: CoffeeSize.TALL
+}
+
 // Tupleの型。型注釈が必ず必要
 // Tupleを簡単に説明すると、配列に厳しく制限がかかったもの
 // Tuple型の使い所=>例)0番目の要素にstring,1番目の要素にnumber,2番目の要素にbooleanが必ずこの順番で配列として欲しい
