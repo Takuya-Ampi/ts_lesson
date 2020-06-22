@@ -4,6 +4,10 @@ let float = 3.14
 let negative = -0.12
 let single = 'hello'
 
+// アロー関数の型
+// const doubleNumber = (number: number): number => number * 2
+const doubleNumber: (num: number)  => number = num => num * 2
+
 // 関数の戻り値にvoid型を使う
 // voidとは戻り値がないこと
 
