@@ -4,6 +4,23 @@ let float = 3.14
 let negative = -0.12
 let single = 'hello'
 
+// typeエイリアス(型を変数のように扱う)
+// union型をうまく使うことで、enumに近いことができる
+
+type ClothSize = 'small' | 'medium' | 'large'
+const cloth: {
+  color: string;
+  size: ClothSize;
+} = {
+  color: 'white',
+  size: 'medium'
+}
+
+// リテラル型
+const apple: 'apple' = 'apple'
+const apples = 'apples' //const使った時点でリテラル型にbなる
+// const apples: 'apples' = 'hello' // エラーが出る
+
 // union型
 // 数値と文字列を許容するみたいに、アンド演算子のように使える
 let unionType: number | string = 10
