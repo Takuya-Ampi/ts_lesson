@@ -4,6 +4,15 @@ let float = 3.14
 let negative = -0.12
 let single = 'hello'
 
+// 関数の戻り値にvoid型を使う
+// voidとは戻り値がないこと
+
+function sayHello(): void{
+  console.log('hello')
+}
+sayHello()
+
+
 // 関数に型をつける(引数と戻り値に型をつける。特に戻り値の型の付け方注意)
 // 戻り値は、パラメーターのかっこの後ろに型をつける
 // 引数については必ず方をつける
