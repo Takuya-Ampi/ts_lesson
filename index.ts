@@ -4,12 +4,14 @@ let float = 3.14
 let negative = -0.12
 let single = 'hello'
 
-const coffeeSize = {
-  short: 'short',
-  tall: 'tall',
-  grande: 'grande',
-  venti: 'venti'
-}
+// union型
+// 数値と文字列を許容するみたいに、アンド演算子のように使える
+let unionType: number | string = 10
+unionType = 'hello'
+// unionType = [0, 1, 'hello'] // エラーが出る
+let unionTypes: (number | string)[] = [21, 'hello', 31] // 解決
+
+
 
 // enumの型。型注釈が必ず必要。書き方が独特なので注意
 // enumは基本大文字から始まる。プロパティは全て大文字にする。
