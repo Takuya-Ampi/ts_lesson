@@ -4,6 +4,16 @@ let float = 3.14
 let negative = -0.12
 let single = 'hello'
 
+// コールバック関数の型
+function doubleAndHandle(num: number, cb: (num: number) => number): void{
+  const doubleNum = cb(num * 2)
+  console.log(num * 2);
+}
+doubleAndHandle(21, doubleNum => {
+  return doubleNum
+})
+
+
 // アロー関数の型
 // const doubleNumber = (number: number): number => number * 2
 const doubleNumber: (num: number)  => number = num => num * 2
